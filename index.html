@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello React!</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+    <body>
+        
+<form id="form-prueba" action="/action_page.php">
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey"  id="firstname" disabled="disabled">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse" id="lastname" onchange="myFunction('change')"> 
+    <select name="coches" multiple="multiple">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
+    <br><br>
+    <input type="submit" value="Submit" id="submit">
+  </form> 
+        <div id="app-test"></div>
+
+        <!-- Main -->
+        <script src="./dist/bundle.js"></script>
+        <script>
+            document.getElementById("firstname").onkeypress = function() {myFunction("keypress")};
+            //document.getElementById("firstname").onkeydown = function() {myFunction("onkeydown")};
+          //  document.getElementById("lastname").onkeyup = function() {myFunction("onkeyup")};
+            document.getElementById("firstname").onblur = function() {myFunction("onblur")};
+            document.getElementById("firstname").onfocus = function() {myFunction("onfocus")};
+           // document.getElementById("lastname").onchange = function() {myFunction("onchange")};
+            document.getElementById("submit").onclick = function() {myFunction("submit")};
+            
+
+            //document.getElementById("firstname").addEventListener("keypress", myFunction);
+            //document.getElementById("lastname").addEventListener("keypress", myFunction);
+            function myFunction(element) {
+                console.log("You has event in:"+ element );
+                debugger;
+            }
+
+        </script>
+    </body>
+</html>
