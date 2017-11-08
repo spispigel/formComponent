@@ -1,13 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { ISelectState } from './selectState.interface';
-import { ISelectProps } from './selectProps.interface';
+import { IOptionState } from './optionState.interface';
+import { IOptionProps } from './optionProps.interface';
 
 import * as $ from 'jquery';
 import * as _ from 'lodash';
 
 
-export class CSelect extends React.Component<ISelectProps, ISelectState> {
+export class COption extends React.Component<IOptionProps, IOptionState> {
     constructor(props: any) {
         super(props);
         const parsedProps = this.parseNode(props.node);
@@ -25,13 +25,13 @@ export class CSelect extends React.Component<ISelectProps, ISelectState> {
     }
 
     public render() {
-        return <select disabled={this.state.disabled} name={this.state.name} size={this.state.size} required={this.state.required} multiple={this.state.multiple}>
-            {this.searchOptionElements()}
-         </select> 
-    }
-
-    searchOptionElements(){
-        return React.createElement(reactElement, {node: element})
+        return <select 
+        disabled={this.state.disabled}
+        name={this.state.name} 
+        size={this.state.size}
+        required={this.state.required}
+        multiple={this.state.multiple}
+        /> 
     }
 
 }
