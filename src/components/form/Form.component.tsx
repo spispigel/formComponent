@@ -28,9 +28,8 @@ class FormComponent extends React.Component<IFormProps, {}> {
 
     searchReactElements(){
         let arrComponents = new Array<any>();
-        const formControls = $(this.props.formHtml).find('select, input, button, textarea, label, fieldset');
+        const formControls = $(this.props.formHtml).children('select, input, button, textarea, label, fieldset');
         formControls.each((index, element)=>{
-            debugger;
             const typeComponent = 'C' + _.capitalize(element.tagName);
             const reactElement = this.components[typeComponent];
             if (reactElement) {

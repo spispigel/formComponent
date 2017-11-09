@@ -3,7 +3,7 @@ const { resolve } = require('path');
 module.exports = env => {
     const config = {
         context: resolve("src"),
-        entry: "./index.tsx",
+        entry: "./index.jsx",
         output: {
             filename: "bundle.js",
             path: resolve("dist"),

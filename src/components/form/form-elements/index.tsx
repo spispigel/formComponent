@@ -5,6 +5,8 @@ import { COptgroup } from './optgroup/optgroup.component';
 import { CTextarea } from './textarea/textarea.component';
 import { CLabel } from './label/label.component';
 import { CButton } from './button/button.component';
+import { CFieldset } from './fieldset/fieldset.component';
+
 
 
 export const Components ={
@@ -14,5 +16,6 @@ export const Components ={
         COptgroup: COptgroup,
         CTextarea: CTextarea,
         CLabel: CLabel,
-        CButton: CButton
+        CButton: CButton,
+        CFieldset: CFieldset
 }
