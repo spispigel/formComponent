@@ -2,12 +2,12 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as $ from 'jquery';
 import * as _ from 'lodash';
-import { IOptionState } from './optionState.interface';
-import { IOptionProps } from './optionProps.interface';
+import { ILabelState } from './labelState.interface';
+import { ILabelProps } from './labelProps.interface';
 
 
 
-export class COption extends React.Component<IOptionProps, IOptionState> {
+export class CLabel extends React.Component<ILabelProps, ILabelState> {
     constructor(props: any) {
         super(props);
         const parsedProps = this.parseNode(props.node);
@@ -25,7 +25,7 @@ export class COption extends React.Component<IOptionProps, IOptionState> {
     }
 
     public render() {
-        return <option disabled={this.state.disabled} selected={this.state.selected} label={this.state.label} value={this.state.value}> {this.props.node.textContent} </option>
+        return <label htmlFor={this.state.for} form={this.state.form}> {this.props.node.textContent} </label>
     }
 
 }

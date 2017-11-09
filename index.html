@@ -8,16 +8,34 @@
     <body>
         
 <form id="form-prueba" action="/action_page.php">
-    First name:<br>
+    <fieldset>
+            <textarea rows="4" cols="50">
+                    At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. 
+                    </textarea>
+    <label for="firstname">First name</label>
     <input type="text" name="firstname" value="Mickey"  id="firstname" disabled="disabled">
     <br>
-    Last name:<br>
+    <label for="lastname">First name</label>
     <input type="text" name="lastname" value="Mouse" id="lastname" onchange="myFunction('change')"> 
-    <select name="coches" multiple="multiple">
+    <button type="button">Click Me!</button>
+</fieldset>
+    <select name="coches">
+        
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
             <option value="opel">Opel</option>
             <option value="audi">Audi</option>
+        
+<!--          
+        <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+              </optgroup>
+              <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </optgroup> -->
+           
           </select>
     <br><br>
     <input type="submit" value="Submit" id="submit">
@@ -40,7 +58,6 @@
             //document.getElementById("lastname").addEventListener("keypress", myFunction);
             function myFunction(element) {
                 console.log("You has event in:"+ element );
-                debugger;
             }
 
         </script>

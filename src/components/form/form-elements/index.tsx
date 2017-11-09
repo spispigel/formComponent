@@ -1,18 +1,18 @@
 import { CInput } from "./input/input.component";
 import { CSelect } from './select/select.component';
-/*
-export { CTextArea } from "./input/textArea.component";
-export { CButton } from "./input/button.component";
-export { CSelect } from "./input/select.component";
-export { COption } from "./input/option.component";
-export { CLabel } from "./input/label.component";
-export { CFieldSet } from "./input/fieldSet.component";
-export { COptGroup } from "./input/optGroup.component";
-*/
-// export interface Components {
-//     [CInput: string]: CInput 
-// }
+import { COption } from './option/option.component';
+import { COptgroup } from './optgroup/optgroup.component';
+import { CTextarea } from './textarea/textarea.component';
+import { CLabel } from './label/label.component';
+import { CButton } from './button/button.component';
+
+
 export const Components ={
         CInput: CInput,
-        CSelect: CSelect
+        CSelect: CSelect,
+        COption: COption,
+        COptgroup: COptgroup,
+        CTextarea: CTextarea,
+        CLabel: CLabel,
+        CButton: CButton
 }

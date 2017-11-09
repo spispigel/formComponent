@@ -2,14 +2,13 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as $ from 'jquery';
 import * as _ from 'lodash';
-import { ISelectState } from './selectState.interface';
-import { ISelectProps } from './selectProps.interface';
+import { IOptgroupState } from './optgroupState.interface';
+import { IOptgroupProps } from './optgroupProps.interface';
 import { Components } from '../index';
 
 
-export class CSelect extends React.Component<ISelectProps, ISelectState> {
+export class COptgroup extends React.Component<IOptgroupProps, IOptgroupState> {
     private components : any;
-
     constructor(props: any) {
         super(props);
         const parsedProps = this.parseNode(props.node);
@@ -28,9 +27,7 @@ export class CSelect extends React.Component<ISelectProps, ISelectState> {
     }
 
     public render() {
-        return <select disabled={this.state.disabled} name={this.state.name} size={this.state.size} required={this.state.required} multiple={this.state.multiple}>
-            {this.searchOptionElements()}
-         </select> 
+        return <optgroup disabled={this.state.disabled} label={this.state.label}> {this.searchOptionElements()} </optgroup>
     }
 
     generateElement(reactElement: any, element:HTMLElement) {
@@ -39,9 +36,7 @@ export class CSelect extends React.Component<ISelectProps, ISelectState> {
 
     searchOptionElements(){
         let arrComponents = new Array<any>();
-        let formControls = $(this.props.node).find('optgroup');
-        if (formControls.length == 0)
-           formControls = $(this.props.node).find('option');
+        const formControls = $(this.props.node).find('option');
         formControls.each((index, element)=>{
             const typeComponent = 'C' + _.capitalize(element.tagName);
             const reactElement = this.components[typeComponent];
