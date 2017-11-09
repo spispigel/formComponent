@@ -19,7 +19,7 @@ module.exports = env => {
             extensions: ['.ts', '.tsx', '.js', '.json'],
 
             // An array of directory names to be resolved to the current directory
-            modules: [resolve("src"), 'node_modules'],
+            modules: [resolve("src"), 'node_modules', resolve('src/plugins')],
 
         },
         module: {

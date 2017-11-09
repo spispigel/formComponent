@@ -9,15 +9,15 @@
         
 <form id="form-prueba" action="/action_page.php">
     <fieldset>
-            <textarea rows="4" cols="50">
+            <textarea rows="4" cols="50" onchange="myFunction('change')">
                     At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. 
                     </textarea>
     <label for="firstname">First name</label>
     <input type="text" name="firstname" value="Mickey"  id="firstname" disabled="disabled">
     <br>
-    <label for="lastname">First name</label>
+    <label for="lastname">Last name</label>
     <input type="text" name="lastname" value="Mouse" id="lastname" onchange="myFunction('change')"> 
-    <button type="button">Click Me!</button>
+    <button type="button" id="clickme">Click Me!</button>
 </fieldset>
     <select name="coches">
         
@@ -45,13 +45,13 @@
         <!-- Main -->
         <script src="./dist/bundle.js"></script>
         <script>
-            document.getElementById("firstname").onkeypress = function() {myFunction("keypress")};
-            //document.getElementById("firstname").onkeydown = function() {myFunction("onkeydown")};
-          //  document.getElementById("lastname").onkeyup = function() {myFunction("onkeyup")};
-            document.getElementById("firstname").onblur = function() {myFunction("onblur")};
-            document.getElementById("firstname").onfocus = function() {myFunction("onfocus")};
+        //     document.getElementById("firstname").onkeypress = function() {myFunction("keypress")};
+        //     //document.getElementById("firstname").onkeydown = function() {myFunction("onkeydown")};
+        //   //  document.getElementById("lastname").onkeyup = function() {myFunction("onkeyup")};
+        //     document.getElementById("firstname").onblur = function() {myFunction("onblur")};
+        //     document.getElementById("firstname").onfocus = function() {myFunction("onfocus")};
            // document.getElementById("lastname").onchange = function() {myFunction("onchange")};
-            document.getElementById("submit").onclick = function() {myFunction("submit")};
+            document.getElementById("clickme").onclick = function() {myFunction("submit")};
             
 
             //document.getElementById("firstname").addEventListener("keypress", myFunction);
